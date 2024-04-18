@@ -1,8 +1,8 @@
 import { addDoc, collection, doc, getDocs, setDoc } from "firebase/firestore";
 import { db } from ".";
 
-export const addTask = task => {
-    return addDoc(collection(db, 'tasks'), task);
+export const addTask = async task => {
+    return await addDoc(collection(db, 'tasks'), task);
 }
 
 export const getTasks = async () => {
